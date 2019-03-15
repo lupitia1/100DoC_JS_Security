@@ -95,7 +95,7 @@ app.use(helmet.xssFilter())
 
 // Use `helmet.ieNoOpen()`
 
-
+app.use(helmet.noSniff());
 
 /**  7) Ask browsers to access your site via HTTPS only - `helmet.hsts()` */
 
