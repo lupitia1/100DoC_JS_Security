@@ -60,7 +60,7 @@ app.use(helmet.frameguard({ action: 'deny' }))
 // that may be dangerous e.g. `<`, `>`.
 // More Info [here](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet).
 
-// Modern browsers can help mitigating XSS risk by adoptiong software strategies,
+// Modern browsers can help mitigating XSS risk by adopting software strategies,
 // which often are configurable via http headers.
 // The `X-XSS-Protection` HTTP header is a basic protection.  When the browser
 // detects a potential injected script using an heuristic filter,
@@ -69,7 +69,7 @@ app.use(helmet.frameguard({ action: 'deny' }))
 
 // Use `helmet.xssFilter()`
 
-
+app.use(helmet.xssFilter())
 
 /** 5) Avoid inferring the response MIME type - `helmet.noSniff()` */
 
